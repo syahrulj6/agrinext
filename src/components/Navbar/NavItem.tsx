@@ -5,7 +5,7 @@ import { ChevronDownIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
-import Button from '../button/Button';
+import Button from '../Button/Button';
 
 type Category = (typeof BLOG_CATEGORIES)[number];
 
