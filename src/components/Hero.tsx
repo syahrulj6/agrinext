@@ -2,15 +2,14 @@ import { ArrowRight } from 'lucide-react';
 import MaxWidthWrapper from './MaxWidthWrapper';
 import Image from 'next/image';
 import Link from 'next/link';
+import Tagline from './Tagline';
 
 const Hero = () => {
   return (
-    <MaxWidthWrapper classname="mt-12 md:-mt-12 ">
+    <MaxWidthWrapper classname="mt-12 md:mt-16 ">
       <div className="flex md:flex-row flex-col w-full bg-white">
         <div className="flex flex-col w-full">
-          <div className="border-2 border-primary rounded-full px-3 py-1 w-fit">
-            <li className="text-primary text-center">Memberdayakan Pertanian Modern</li>
-          </div>
+          <Tagline title="Memberdayakan Pertanian Modern" />
           <h1 className="text-5xl lg:text-6xl font-bold text-primary mt-4">Solusi pertanian berkelanjutan untuk masa depan yang lebih baik.</h1>
 
           <p className="text-primary mt-6 w-3/4 tracking-tight">Menghadirkan teknologi mutakhir dan praktik inovatif ke dunia pertanian, membantu Anda memaksimalkan hasil, mengurangi limbah, dan meningkatkan keberlanjutan</p>
