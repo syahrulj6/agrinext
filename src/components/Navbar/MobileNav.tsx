@@ -1,7 +1,7 @@
 'use client';
 
 import { BLOG_CATEGORIES } from '@/config';
-import { Menu, X } from 'lucide-react';
+import { ArrowRight, Blend, Bot, Layers, Menu, UsersRound, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -12,19 +12,16 @@ const MobileNav = () => {
 
   const pathname = usePathname();
 
-  // Close the menu whenever the pathname changes
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
 
-  // Close the menu when clicking the current path
   const closeOnCurrent = (href: string) => {
     if (pathname === href) {
       setIsOpen(false);
     }
   };
 
-  // Handle body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) document.body.classList.add('overflow-hidden');
     else document.body.classList.remove('overflow-hidden');
@@ -38,12 +35,11 @@ const MobileNav = () => {
     );
 
   return (
-    <div>
-      <div className="relative z-40 lg:hidden">
+    <div className="ml-auto">
+      <div className="relative z-40 md:hidden">
         <div className="fixed inset-0 bg-black bg-opacity-25" />
       </div>
 
-      {/* Updated: Position the menu on the right side */}
       <div className="fixed overflow-y-scroll overscroll-y-none inset-0 z-40 flex justify-end">
         <div className="w-4/5">
           <div className="relative flex w-full max-w-sm flex-col overflow-y-auto bg-white pb-12 shadow-xl">
@@ -53,7 +49,22 @@ const MobileNav = () => {
               </button>
             </div>
 
-            <div className="mt-2">
+            <div className="mt-5 w-full px-4 flex flex-col gap-6">
+              <div className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
+                <Layers className="black h-4 w-4" />
+                <p className="font-semibold lg:text-md">Layanan</p>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
+                <Blend className="h-4 w-4" />
+                <p className="font-semibold lg:text-md">Solusi</p>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
+                <UsersRound className="h-4 w-4" />
+                <p className="font-semibold lg:text-md">Tentang Kami</p>
+              </div>
+            </div>
+
+            <div>
               <ul>
                 {BLOG_CATEGORIES.map((category) => (
                   <li key={category.label} className="space-y-10 px-4 pb-8 pt-10">
@@ -79,8 +90,12 @@ const MobileNav = () => {
                 ))}
               </ul>
             </div>
-
-            <div className="space-y-6 border-t border-gray-200 px-4 py-6"></div>
+            <Link href="kontak-kami" className="mx-3 flex gap-3 px-3 py-2 rounded-full justify-center w-fit items-center bg-primary hover:bg-[#327726] transition-all">
+              <p className="text-white text-md text-base ">Kontak Kami</p>
+              <div className="bg-white p-2 rounded-full">
+                <ArrowRight className="w-4 h-4 text-primary" />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
