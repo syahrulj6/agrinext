@@ -6,17 +6,17 @@ export const BLOG_CATEGORIES = [
       {
         name: 'Inovasi Terbaru',
         href: '/blogs',
-        imageSrc: '/nav/ui-kits/mixed.jpg',
+        imageSrc: '/blog1.jpg',
       },
       {
         name: 'Tips Bertani',
         href: '/blogs',
-        imageSrc: '/nav/ui-kits/blue.jpg',
+        imageSrc: '/blog2.jpg',
       },
       {
         name: 'Panduan Penggunaan Teknologi',
         href: '/blogs',
-        imageSrc: '/nav/ui-kits/purple.jpg',
+        imageSrc: '/blog3.jpg',
       },
     ],
   },

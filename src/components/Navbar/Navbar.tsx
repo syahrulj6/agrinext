@@ -9,21 +9,17 @@ import Image from 'next/image';
 import { ArrowRight, Blend, Bot, Layers, UsersRound } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const Navbar = async () => {
+const Navbar = () => {
   return (
     <motion.div initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }} className="bg-dark sticky z-50 top-0 inset-x-0 h-16">
       <header className="relative bg-white">
         <MaxWidthWrapper>
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center justify-between w-full">
-              {/* Left side - Logo */}
               <div className="flex items-center">
-                <Link href="/">
-                  <Image alt="logo" src="/logo.png" width={36} height={36} />
-                </Link>
+                <Link href="/">{/* <Image alt="logo" src=" " width={36} height={36} /> */}</Link>
               </div>
 
-              {/* Mobile Nav and AgriBot - Right side */}
               <div className="flex items-center ml-auto gap-3 mx-4">
                 <div className="flex items-center lg:hidden">
                   <Link href="/bot" className="text-md font-semibold text-primary flex  gap-2 items-center ">

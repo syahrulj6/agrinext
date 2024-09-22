@@ -18,8 +18,8 @@ interface NavItemProps {
 
 const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
   return (
-    <div className="flex">
-      <div className="lg:-ml-4 relative flex items-center ttext-gray-700 hover:text-black transition-all  duration-150">
+    <div className="flex ">
+      <div className="lg:-ml-4 relative flex items-center text-gray-700 hover:text-black transition-all  duration-150">
         <Button className="gap-1.5 font-semibold " onClick={handleOpen} variant="ghost">
           {category.label}
           <ChevronDownIcon
@@ -38,7 +38,7 @@ const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
         >
           <div className="absolute inset-0 top-1/2  shadow" aria-hidden="true" />
 
-          <div className="relative">
+          <div className="relative bg-white">
             <div className="mx-auto max-w-7xl px-8">
               <div className="grid grid-cols-4 gap-x-8 gap-y-10 py-16">
                 <div className="col-span-4 col-start-1 grid grid-cols-3 gap-x-8">
@@ -50,9 +50,9 @@ const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
                       <Link href={item.href} className="mt-6 block font-medium text-black">
                         {item.name}
                       </Link>
-                      <p className="mt-1" aria-hidden="true">
+                      <Link href={item.href} className="mt-1">
                         Read now
-                      </p>
+                      </Link>
                     </div>
                   ))}
                 </div>
