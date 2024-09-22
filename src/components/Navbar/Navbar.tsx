@@ -16,9 +16,10 @@ const Navbar = () => {
         <MaxWidthWrapper>
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center justify-between w-full">
-              <div className="flex items-center">
-                <Link href="/">{/* <Image alt="logo" src=" " width={36} height={36} /> */}</Link>
-              </div>
+              <Link href="/" className="flex items-center gap-x-2">
+                <Image alt="logo" src="/logo.png" width={36} height={36} />
+                <p className="text-[#56924a] font-bold text-lg">AgriNext</p>
+              </Link>
 
               <div className="flex items-center ml-auto gap-3 mx-4">
                 <div className="flex items-center lg:hidden">
