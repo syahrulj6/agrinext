@@ -1,5 +1,6 @@
 import AboutUs from '@/components/AboutUs';
 import Blogs from '@/components/Blogs';
+import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import Solutions from '@/components/Solutiouns';
@@ -12,6 +13,7 @@ export default function Home() {
       <Solutions />
       <Blogs />
       <Services />
+      <Footer/>
     </div>
   );
 }
