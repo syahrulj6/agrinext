@@ -51,7 +51,7 @@ const Services = () => {
         ))}
       </div>
       <div className="flex justify-center -mt-2 pt-6  pb-12">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 mb-11">
           {services.slice(3).map((service) => (
             <div key={service.id} className="flex flex-col items-center bg-[#e1f7e8] py-10 px-8 rounded-xl ">
               <div className="bg-primary p-3 rounded-full">{service.icon}</div>
