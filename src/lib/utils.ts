@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function constructMetadata({
-  title = 'AgriNext - Inovasi untuk masa depan pertanian',
+  title = 'AgriNext',
   description = ' AgriNext, tempat inovasi bertemu dengan keberlanjutan. Kami menghadirkan teknologi cerdas untuk pertanian global yang lebih baik.',
   image = '/agrinext.png',
   icons = '/logo.png',
@@ -36,10 +36,10 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: '@joshtriedcoding',
+      creator: '@codewithjay.io',
     },
     icons,
-    metadataBase: new URL('https://digitalhippo.up.railway.app'),
+    metadataBase: new URL('http://localhost:3000'),
     ...(noIndex && {
       robots: {
         index: false,

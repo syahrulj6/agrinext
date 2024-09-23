@@ -35,18 +35,18 @@ const Navbar = () => {
 
               {/* Center Navigation - Desktop */}
               <div className="hidden lg:flex gap-6 ml-8">
-                <div className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
+                <Link href="#layanan" className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
                   <Layers className="black h-4 w-4" />
                   <p className="font-semibold lg:text-md">Layanan</p>
-                </div>
-                <div className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
+                </Link>
+                <Link href="#solusi" className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
                   <Blend className="h-4 w-4" />
                   <p className="font-semibold lg:text-md">Solusi</p>
-                </div>
-                <div className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
+                </Link>
+                <Link href="#tentang-kami" className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
                   <UsersRound className="h-4 w-4" />
                   <p className="font-semibold lg:text-md">Tentang Kami</p>
-                </div>
+                </Link>
 
                 <NavItems />
               </div>

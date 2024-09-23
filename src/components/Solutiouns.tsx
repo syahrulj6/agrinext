@@ -31,7 +31,7 @@ const solutions = [
 ];
 
 const Solutions = () => {
-  const [openSolutionId, setOpenSolutionId] = useState<number | null>(null);
+  const [openSolutionId, setOpenSolutionId] = useState<number | null>(1);
 
   const toggleSolution = (id: number) => {
     if (openSolutionId === id) {
@@ -43,7 +43,7 @@ const Solutions = () => {
 
   return (
     <MaxWidthWrapper>
-      <div className="flex flex-col space-y-4 mt-12 md:mt-20 ">
+      <div className="flex flex-col space-y-4 mt-12 md:mt-20 " id="solusi">
         {solutions.map((solution: SolutionInterface) => (
           <div key={solution.id} className={`py-4 px-3 rounded-xl transition-all ${openSolutionId === solution.id ? 'bg-[#e1f7e8]' : 'bg-gray-100'}`}>
             <button className="flex items-center justify-between text-xl md:text-3xl text-primary text-left w-full focus:outline-none" onClick={() => toggleSolution(solution.id)}>

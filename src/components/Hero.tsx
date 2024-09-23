@@ -6,8 +6,8 @@ import Tagline from './Tagline';
 
 const Hero = () => {
   return (
-    <MaxWidthWrapper classname="mt-12 md:mt-24 ">
-      <div className="flex md:flex-row flex-col w-full bg-white">
+    <MaxWidthWrapper classname="mt-12 md:mt-24">
+      <div className="flex md:flex-row flex-col w-full bg-white" id="hero">
         <div className="flex flex-col w-full">
           <Tagline title="Memberdayakan Pertanian Modern" />
           <h1 className="text-5xl lg:text-6xl font-bold text-primary mt-4">Solusi pertanian berkelanjutan untuk masa depan yang lebih baik.</h1>
