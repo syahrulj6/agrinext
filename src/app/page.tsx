@@ -1,6 +1,7 @@
 import AboutUs from '@/components/AboutUs';
 import Blogs from '@/components/Blogs';
 import Hero from '@/components/Hero';
+import Services from '@/components/Services';
 import Solutions from '@/components/Solutiouns';
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <AboutUs />
       <Solutions />
       <Blogs />
+      <Services />
     </div>
   );
 }
