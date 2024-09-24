@@ -1,65 +1,91 @@
-import React from 'react';
-import MaxWidthWrapper from './MaxWidthWrapper';
+import React, { FC } from 'react';
+import { ArrowUpRight, Facebook, Instagram, Linkedin, Twitter, Icon as LucideIcon } from 'lucide-react';
+import Image from 'next/image';
 
-const Footer = () => {
+// Define prop types for SocialIcon component
+interface SocialIconProps {
+  Icon: LucideIcon;
+  className?: string;
+}
+
+// Define prop types for FooterLinks component
+interface FooterLinksProps {
+  title: string;
+  links: string[];
+}
+
+// SocialIcon component
+const SocialIcon: FC<SocialIconProps> = ({ Icon, className = "" }) => (
+  <div className={`circle flex justify-center items-center w-8 h-8 border border-white rounded-full ${className}`}>
+    <Icon className="w-5 text-white" />
+  </div>
+);
+
+// FooterLinks component
+const FooterLinks: FC<FooterLinksProps> = ({ title, links }) => (
+  <div className="footer-section flex flex-col gap-4 text-white md:mr-3">
+    <h2 className="text-xl font-semibold mb-2">{title}</h2>
+    {links.map((link, index) => (
+      <a key={index} className="font-normal">{link}</a>
+    ))}
+  </div>
+);
+
+// Main Footer component
+const Footer: FC = () => {
   return (
-    <div className="flex justify-center bottom-0 py-5 bg-primary w-full">
-      <MaxWidthWrapper classname=''>
-        <div className="content flex flex-col">
-          <div className="p-10 flex justify-center bg-white rounded-2xl mb-16">
-            <div className="title text-center">
-              <h2 className='text-4xl tracking-tight font-semibold mb-2'>Ready to launch your</h2>
-              <h2 className='text-4xl tracking-tight font-semibold mb-6'>Digital Marketing Project?</h2>
-              <p className='tracking-tighter font-normal'>Ready to launch your digital marketing project? Let us craft</p>
-              <p className='tracking-tighter font-normal mb-5'>strategies that drive results ad growth.</p>
-              <div className="button">
-                <button className='bg-primary py-3 px-12 rounded-md text-white shadow-second shadow-2xl hover:bg-second transition-all'>Let's Talk <span></span></button>
-              </div>
+    <footer className="flex justify-center py-5 bg-primary w-full">
+      <div className="content flex w-full px-8 flex-col">
+        
+        {/* Call to Action Section */}
+        <div className="py-10 px-4 md:p-10 flex justify-center bg-white rounded-2xl mb-16">
+          <div className="title text-center">
+            <h2 className="text-2xl md:text-4xl tracking-tight font-semibold mb-2">Siap Meningkatkan proyek</h2>
+            <h2 className="text-2xl md:text-4xl tracking-tight font-semibold mb-6">Digital Marketing Project Anda?</h2>
+            <p className="text-xs md:text-base  md:tracking-tighter font-normal">Siap meningkatkan proyek pemasaran digital Anda? Kami siap membantu</p>
+            <p className="text-xs md:text-base  md:tracking-tighter font-normal mb-5">strategi hasil dan pertumbuhan nyata.</p>
+            <div className="button flex justify-center">
+              <button className="bg-primary flex py-4 px-9 rounded-md text-white shadow-second shadow-2xl hover:bg-second transition-all">
+              Hubungi Kami <ArrowUpRight className="ml-2 w-5" />
+              </button>
             </div>
           </div>
-          <div className="bottomFooter flex justify-between mx-6 ">
-            <div className="side1 flex flex-col w-96 ">
-              <div className="logoimg text-4xl mb-6 text-white">
-                <h2>LOGO</h2>
-              </div>
-              <div className="logotitle tracking-tighter font-normal mb-14 text-white">
-                <p>At AgriNext, we specialize in innovative digital marketing</p>
-                <p>strategies that drive results, Our team is dedicated to</p>
-                <p>helping business grow and succeed online.</p>
-              </div>
-              <div className="linkimg ">
-                <p className='text-white'>F IG IN X</p>
-              </div>
-            </div>
-            <div className="side2 gap-20 flex w-[32rem]">
-              <div className="home flex flex-col gap-4  text-white">
-                <h2 className='text-xl font-semibold mb-4'>Home</h2>
-                <a className='font-normal'>How It Works?</a>
-                <a className='font-normal'>Web Design</a>
-                <a className='font-normal'>All Project</a>
-                <a className='font-normal'>Contact Us</a>
-              </div>
-              <div className="home flex flex-col gap-4  text-white">
-                <h2 className='text-xl font-semibold mb-4'>Company</h2>
-                <a className='font-normal'>About Us</a>
-                <a className='font-normal'>Reviews</a>
-                <a className='font-normal'>Our Stories</a>
-                <a className='font-normal'>FAQs</a>
-              </div>
-              <div className="home flex flex-col gap-4  text-white">
-                <h2 className='text-xl font-semibold mb-4'>Contact</h2>
-                <a className='font-normal'>+99 458 555 4785</a>
-                <a className='font-normal'>Info.saspik.com</a>
-                <a className='font-normal'>Contact us</a>
-                <a className='font-normal'>Terms of Service</a>
-              </div>
-            </div>
-          </div>
-          <div className="garis mt-10 border-[0.5px] border-[#1D4C30] mb-5"></div>
-          <h2 className='text-white font-normal text-center text-sm'>Copyright © 2024 AgriNext All rights reserved</h2>
         </div>
-      </MaxWidthWrapper>
-    </div>
+        
+        {/* Footer Content */}
+        <div className="bottomFooter flex flex-col md:flex-row justify-between mx-6 space-y-8 md:space-y-0">
+          {/* Left Side: Logo and Description */}
+          <div className="side1 flex flex-col md:w-1/3">
+            <div className="logoimg flex gap-2 h-14 text-4xl mb-5 text-white">
+              <div className="shoes relative w-16">
+                <Image alt="AgriNext Logo" src="/LogoWhite.png" fill className="object-cover" />
+              </div>
+              <div className="agriNext flex items-center font-bold">AgriNext</div>
+            </div>
+            <div className="logotitle text-white tracking-tighter font-normal mb-10">
+              <p>Di AgriNext, kami mengkhususkan diri dalam strategi pemasaran digital inovatif yang mendorong hasil nyata. Tim kami berdedikasi untuk membantu bisnis pertanian tumbuh dan sukses di dunia online.</p>
+            </div>
+            <div className="linkimg flex gap-4 ml-1">
+              <SocialIcon Icon={Facebook} />
+              <SocialIcon Icon={Instagram} />
+              <SocialIcon Icon={Linkedin} />
+              <SocialIcon Icon={Twitter} />
+            </div>
+          </div>
+          
+          {/* Right Side: Footer Links */}
+          <div className="side2 flex text-xs gap-4 md:flex-row  md:text-base md:gap-20">
+            <FooterLinks title="Home" links={['Solusi Kami !', 'Web Design', 'Blog',]} />
+            <FooterLinks title="Company" links={['Tentang Kami', 'Layanan','FAQs', 'AgriBot']} />
+            <FooterLinks title="Contact" links={['+62 822 3368 1022', '+62 877-9276-4859', 'Kontak Kami']} />
+          </div>
+        </div>
+        
+        {/* Bottom Line and Copyright */}
+        <div className="border-t-[0.5px] border-[#1D4C30] mt-10 mb-5"></div>
+        <p className="text-white text-center text-sm">Copyright © 2024 AgriNext. All rights reserved.</p>
+      </div>
+    </footer>
   );
 };
 

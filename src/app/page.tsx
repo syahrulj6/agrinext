@@ -13,7 +13,6 @@ export default function Home() {
       <Solutions />
       <Blogs />
       <Services />
-      <Footer/>
     </div>
   );
 }
