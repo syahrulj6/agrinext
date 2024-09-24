@@ -44,21 +44,23 @@ const Solutions = () => {
   return (
     <MaxWidthWrapper>
       <div id="solusi" />
-      <div className="flex flex-col space-y-4 mt-12 md:mt-20 ">
+      <div className="flex flex-col space-y-4 mt-12 md:mt-20">
         {solutions.map((solution: SolutionInterface) => (
-          <div key={solution.id} className={`py-4 px-3 rounded-xl transition-all ${openSolutionId === solution.id ? 'bg-[#e1f7e8]' : 'bg-gray-100'}`}>
+          <div key={solution.id} className={`py-4 px-3 rounded-xl transition-all duration-300 ease-in-out ${openSolutionId === solution.id ? 'bg-[#e1f7e8]' : 'bg-gray-100'}`}>
             <button className="flex items-center justify-between text-xl md:text-3xl text-primary text-left w-full focus:outline-none" onClick={() => toggleSolution(solution.id)}>
               <p>{solution.title}</p>
               {openSolutionId === solution.id ? (
-                <div className="bg-primary p-2 rounded-full transition-all">
-                  <MoveUpRight className="text-white h-5 w-5 transition-transform transform" />
+                <div className="bg-primary p-2 rounded-full transition-all duration-300 ease-in-out">
+                  <MoveUpRight className="text-white h-5 w-5 transition-transform transform rotate-45" />
                 </div>
               ) : (
-                <MoveDownRight className="w-3 h-3 text-primary transition-transform transform" />
+                <div className="transition-all duration-300 ease-in-out">
+                  <MoveDownRight className="w-5 h-5 text-primary transition-transform transform" />
+                </div>
               )}
             </button>
             {openSolutionId === solution.id && (
-              <div className="py-2 border-l-4 my-3 border-primary">
+              <div className="py-2 border-l-4 my-3 border-primary transition-all duration-300 ease-in-out">
                 <p className="ml-4 w-3/4 text-gray-500 tracking-tight">{solution.description}</p>
               </div>
             )}

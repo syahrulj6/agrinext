@@ -15,7 +15,7 @@ const Hero = () => {
           <p className="text-primary mt-6 w-3/4 tracking-tight">Menghadirkan teknologi mutakhir dan praktik inovatif ke dunia pertanian, membantu Anda memaksimalkan hasil, mengurangi limbah, dan meningkatkan keberlanjutan</p>
 
           <div className="flex gap-4 items-center mt-6 lg:mt-8">
-            <a href="#" className="flex gap-3 px-4 py-2 rounded-full justify-center w-fit items-center bg-primary hover:bg-primaryHover transition-all">
+            <a href="#" className="flex gap-3 px-4 py-2 rounded-full justify-center w-fit items-center bg-primary hover:bg-[#327726] transition-all">
               <p className="text-white text-base">Mulai</p>
               <div className="bg-white p-2 rounded-full">
                 <ArrowRight className="w-4 h-4 text-primary" />
