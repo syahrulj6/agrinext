@@ -60,7 +60,7 @@ const Navbar = () => {
                       <Bot className="h-5 w-5 text-primary" />
                     </div>
                   </Link>
-                  <Link href="kontak-kami" className="mx-3 flex gap-3 px-3 py-2 rounded-full justify-center w-fit items-center bg-primary hover:bg-[#327726] transition-all">
+                  <Link href="/kontak-kami" className="mx-3 flex gap-3 px-3 py-2 rounded-full justify-center w-fit items-center bg-primary hover:bg-[#327726] transition-all">
                     <p className="text-white text-md text-base">Kontak Kami</p>
                     <div className="bg-white p-2 rounded-full">
                       <ArrowRight className="w-4 h-4 text-primary" />
