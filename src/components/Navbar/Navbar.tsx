@@ -33,7 +33,6 @@ const Navbar = () => {
                 <MobileNav />
               </div>
 
-              {/* Center Navigation - Desktop */}
               <div className="hidden lg:flex gap-6 ml-8">
                 <Link href="#layanan" className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
                   <Layers className="black h-4 w-4" />
@@ -51,7 +50,6 @@ const Navbar = () => {
                 <NavItems />
               </div>
 
-              {/* Right Side - Desktop */}
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                 <div className="ml-4 flex lg:ml-6">
                   <Link href="/bot" className="text-md font-semibold text-primary flex gap-2 items-center ">

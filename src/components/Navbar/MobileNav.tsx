@@ -52,15 +52,21 @@ const MobileNav = () => {
             <div className="mt-5 w-full px-4 flex flex-col gap-6">
               <div className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
                 <Layers className="black h-4 w-4" />
-                <p className="font-semibold lg:text-md">Layanan</p>
+                <Link href="#layanan" className="font-semibold lg:text-md" onClick={() => setIsOpen(false)}>
+                  Layanan
+                </Link>
               </div>
               <div className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
                 <Blend className="h-4 w-4" />
-                <p className="font-semibold lg:text-md">Solusi</p>
+                <Link href="#solusi" className="font-semibold lg:text-md" onClick={() => setIsOpen(false)}>
+                  Solusi
+                </Link>
               </div>
               <div className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
                 <UsersRound className="h-4 w-4" />
-                <p className="font-semibold lg:text-md">Tentang Kami</p>
+                <Link href="#tentang-kami" className="font-semibold lg:text-md" onClick={() => setIsOpen(false)}>
+                  Tentang Kami
+                </Link>
               </div>
             </div>
 
@@ -80,7 +86,7 @@ const MobileNav = () => {
                           <div className="relative aspect-square overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
                             <Image fill src={item.imageSrc} alt="product category image" className="object-cover object-center" />
                           </div>
-                          <Link href={item.href} className="mt-6 block font-medium text-gray-900">
+                          <Link href={item.href} className="mt-6 block font-medium text-gray-900" onClick={() => setIsOpen(false)}>
                             {item.name}
                           </Link>
                         </div>
@@ -90,7 +96,7 @@ const MobileNav = () => {
                 ))}
               </ul>
             </div>
-            <Link href="kontak-kami" className="mx-3 flex gap-3 px-3 py-2 rounded-full justify-center w-fit items-center bg-primary hover:bg-[#327726] transition-all">
+            <Link onClick={() => closeOnCurrent('/kontak-kami')} href="kontak-kami" className="mx-3 flex gap-3 px-3 py-2 rounded-full justify-center w-fit items-center bg-primary hover:bg-[#327726] transition-all">
               <p className="text-white text-md text-base ">Kontak Kami</p>
               <div className="bg-white p-2 rounded-full">
                 <ArrowRight className="w-4 h-4 text-primary" />
