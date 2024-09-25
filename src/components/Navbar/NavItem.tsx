@@ -5,7 +5,6 @@ import { ChevronDownIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
-import Button from '../Button/Button';
 
 type Category = (typeof BLOG_CATEGORIES)[number];
 
@@ -20,14 +19,14 @@ const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
   return (
     <div className="flex ">
       <div className="lg:-ml-4 relative flex items-center text-gray-700 hover:text-black transition-all  duration-150">
-        <Button className="gap-1.5 font-semibold " onClick={handleOpen} variant="ghost">
+        <button className="gap-1.5 font-semibold flex px-4 items-center" onClick={handleOpen}>
           {category.label}
           <ChevronDownIcon
             className={cn('h-4 w-4 transition-all text-muted-foreground ', {
               '-rotate-180 text-black': isOpen,
             })}
           />
-        </Button>
+        </button>
       </div>
 
       {isOpen ? (
@@ -36,7 +35,7 @@ const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
             'animate-in fade-in-10 slide-in-from-top-5': !isAnyOpen,
           })}
         >
-          <div className="absolute inset-0 top-1/2  shadow" aria-hidden="true" />
+          <div className="absolute inset-0 top-1/2 shadow" aria-hidden="true" />
 
           <div className="relative bg-white">
             <div className="mx-auto max-w-7xl px-8">
@@ -45,12 +44,10 @@ const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
                   {category.featured.map((item) => (
                     <div key={item.name} className="group relative text-base sm:text-sm">
                       <div className="relative aspect-video overflow-hidden rounded-lg bg-gray-gray-700 group-hover:opacity-75">
-                        <Image src={item.imageSrc} alt="Product category image" fill className="object-cover object-center" />
+                        <Image src={item.imageSrc} alt="Product category image" fill className="object-cover object-center" sizes="(max-width: 640px) 50vw, (min-width: 641px) 25vw" />
                       </div>
-                      <Link href="#blogs" className="mt-6 block font-medium text-black">
-                        {item.name}
-                      </Link>
-                      <Link href={item.href} className="mt-1">
+                      <p className="mt-6 block font-medium text-black">{item.name}</p>
+                      <Link href={`/blog/${item.href}`} className="mt-1">
                         Read now
                       </Link>
                     </div>

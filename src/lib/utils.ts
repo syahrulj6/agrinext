@@ -9,8 +9,8 @@ export function cn(...inputs: ClassValue[]) {
 export function constructMetadata({
   title = 'AgriNext',
   description = ' AgriNext, tempat inovasi bertemu dengan keberlanjutan. Kami menghadirkan teknologi cerdas untuk pertanian global yang lebih baik.',
-  image = '/agrinext.png',
-  icons = '/logo.png',
+  image = '/Logo.png',
+  icons = '/Logo.png',
   noIndex = false,
 }: {
   title?: string;

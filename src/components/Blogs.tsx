@@ -43,7 +43,7 @@ const Blogs = () => {
           siap membantu Anda.
         </p>
 
-        <div className="flex  gap-2">
+        <div className="flex gap-2">
           <button className={`p-3 rounded-full ${leftButtonBg}`} onClick={handlePrev} disabled={startIndex === 0}>
             <ChevronLeft className="w-3 h-3 md:w-5 md:h-5" />
           </button>
@@ -53,13 +53,13 @@ const Blogs = () => {
         </div>
       </div>
 
-      <div className="hidden mt-8  gap-y-0 md:grid grid-cols-3 gap-x-3">
+      <div className="hidden mt-8 gap-y-0 md:grid grid-cols-3 gap-x-3">
         {displayedBlogs.map((blog) => (
-          <div key={blog.id} className="mb-6 col-span-1  flex flex-col justify-between">
+          <div key={blog.id} className="mb-6 col-span-1 flex flex-col justify-between">
             <div className="relative h-[250px] md:h-[300px] w-full rounded-xl overflow-hidden">
-              <Image src={blog.image} alt="Blog Image" fill className="w-full h-full object-cover" />
+              <Image src={blog.image} alt="Blog Image" fill className="w-full h-full object-cover" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw" />
             </div>
-            <h2 className="text-lg md:text-xl font-bold text-primary mt-2 ">{blog.title}</h2>
+            <h2 className="text-lg md:text-xl font-bold text-primary mt-2">{blog.title}</h2>
             <p className="text-primary mt-2 tracking-tight">{blog.description}</p>
             <p className="text-gray-400 text-sm mt-2 mb-5">{blog.date}</p>
 
@@ -70,13 +70,13 @@ const Blogs = () => {
         ))}
       </div>
 
-      <div className="md:hidden mt-8  gap-y-0 grid grid-cols-2 gap-x-3">
+      <div className="md:hidden mt-8 gap-y-0 grid grid-cols-2 gap-x-3">
         {displayedBlogsMobile.map((blog) => (
-          <div key={blog.id} className="mb-6 col-span-1  flex flex-col justify-between">
-            <div className="relative h-[200px]  w-full rounded-xl overflow-hidden">
-              <Image src={blog.image} alt="Blog Image" fill className="w-full h-full object-cover" />
+          <div key={blog.id} className="mb-6 col-span-1 flex flex-col justify-between">
+            <div className="relative h-[200px] w-full rounded-xl overflow-hidden">
+              <Image src={blog.image} alt="Blog Image" fill className="w-full h-full object-cover" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 50vw" />
             </div>
-            <h2 className="text-base font-bold text-primary mt-2 ">{blog.title}</h2>
+            <h2 className="text-base font-bold text-primary mt-2">{blog.title}</h2>
             <p className="text-gray-400 text-sm mt-2 mb-5">{blog.date}</p>
 
             <Link className="w-fit rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all px-4 py-2" href={`/blog/${blog.label}`}>

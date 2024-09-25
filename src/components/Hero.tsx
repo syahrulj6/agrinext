@@ -10,6 +10,7 @@ const Hero = () => {
       <div className="flex md:flex-row flex-col w-full bg-white" id="hero">
         <div className="flex flex-col w-full">
           <Tagline title="Memberdayakan Pertanian Modern" />
+
           <h1 className="text-5xl lg:text-6xl font-bold text-primary mt-4">Solusi pertanian berkelanjutan untuk masa depan yang lebih baik.</h1>
 
           <p className="text-primary mt-6 w-3/4 tracking-tight">Menghadirkan teknologi mutakhir dan praktik inovatif ke dunia pertanian, membantu Anda memaksimalkan hasil, mengurangi limbah, dan meningkatkan keberlanjutan</p>
@@ -28,15 +29,15 @@ const Hero = () => {
         </div>
 
         <div className="grid w-full grid-cols-2 gap-4 mt-6 md:mt-0">
-          <div className="col-span-2 relative w-full h-[250px]  md:h-[300px] rounded-3xl overflow-hidden">
-            <Image alt="image" src="/hero1.jpg" fill className="w-full h-full object-cover" />
+          <div className="col-span-2 relative w-full h-[250px] md:h-[300px] rounded-3xl overflow-hidden">
+            <Image alt="image" src="/hero1.jpg" fill className="w-full h-full object-cover" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw" />
           </div>
 
           <div className="relative w-full h-[150px] md:h-[200px] rounded-3xl overflow-hidden">
-            <Image alt="image" src="/hero2.jpg" fill className="w-full h-full object-cover" />
+            <Image alt="image" src="/hero2.jpg" fill className="w-full h-full object-cover" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw" />
           </div>
           <div className="relative w-full h-[150px] md:h-[200px] rounded-3xl overflow-hidden">
-            <Image alt="image" src="/hero3.jpg" fill className="w-full h-full object-cover" />
+            <Image alt="image" src="/hero3.jpg" fill className="w-full h-full object-cover" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw" />
           </div>
         </div>
       </div>

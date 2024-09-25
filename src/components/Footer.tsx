@@ -50,7 +50,7 @@ const Footer: FC = () => {
           <div className="side1 flex flex-col md:w-1/3">
             <div className="logoimg flex gap-2 h-14 text-4xl mb-5 text-white">
               <div className="shoes relative w-16">
-                <Image alt="AgriNext Logo" src="/LogoWhite.png" fill className="object-cover" />
+                <Image alt="AgriNext Logo" src="/LogoWhite.png" fill className="object-cover" sizes="(max-width: 640px) 50px, (min-width: 641px) 100px" />
               </div>
               <div className="agriNext flex items-center font-bold">AgriNext</div>
             </div>
