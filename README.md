@@ -62,4 +62,5 @@
   npm run dev
 
 Google LightHouse
-![Screenshot](public/latestlighthousetest.png)
+![Screenshot](/public/desktop-lighthouse.png)
+![Screenshot](public/mobile-lighthouse.png)
