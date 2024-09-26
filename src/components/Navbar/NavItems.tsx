@@ -25,15 +25,18 @@ const NavItems = () => {
   const isAnyOpen = activeIndex !== null;
 
   const navRef = useRef<HTMLDivElement | null>(null);
-
   useOnClickOutside(navRef, () => setActiveIndex(null));
 
+  const handleClose = () => {
+    setActiveIndex(null);
+  };
+
   return (
-    <div className="flex gap-4 h-full " ref={navRef}>
+    <div className="flex gap-4 h-full" ref={navRef}>
       {BLOG_CATEGORIES.map((category, index) => {
         const handleOpen = () => {
           if (activeIndex === index) {
-            setActiveIndex(null);
+            handleClose();
           } else {
             setActiveIndex(index);
           }
@@ -41,7 +44,7 @@ const NavItems = () => {
 
         const isOpen = index === activeIndex;
 
-        return <NavItem category={category} handleOpen={handleOpen} isOpen={isOpen} key={category.value} isAnyOpen={isAnyOpen} />;
+        return <NavItem category={category} handleOpen={handleOpen} handleClose={handleClose} isOpen={isOpen} key={category.value} isAnyOpen={isAnyOpen} />;
       })}
     </div>
   );

@@ -75,7 +75,6 @@ const Footer: FC = () => {
           </div>
         </div>
 
-        {/* Bottom Line and Copyright */}
         <div className="border-t-[0.5px] border-[#1D4C30] mt-10 mb-5"></div>
         <p className="text-white text-center text-sm">Copyright © 2024 AgriNext. All rights reserved.</p>
       </div>

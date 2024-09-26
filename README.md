@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+1. Ringkasan Project
 
-## Getting Started
+   - Nama Project: Agrinext
+   - Deskripsi: Aplikasi web statis yang berfokus pada penyediaan solusi dan layanan pertanian inovatif.
+   - Teknologi yang Digunakan: Next.js14, TypeScript, Tailwind CSS
 
-First, run the development server:
+2. Struktur Folder
+   /app
+   ├── /page.tsx # Titik masuk utama aplikasi
+   ├── /components
+   │ ├── Hero.tsx # Hero section component
+   │ ├── Solutions.tsx # Solutions section component
+   │ ├── Blogs.tsx # Blogs section component
+   │ ├── Services.tsx # Services section component
+   │ ├── Faq.tsx # FAQ section component
+   │ └── Footer.tsx # Footer component
+   ├── /blog
+   │ └── [label]
+   │ └── page.tsx # Halaman untuk menampilkan satu postingan blog
+   └── /agribot
+   └── page.tsx # Halaman chatbot
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+3. Deskripsi Component
+   3.1 Hero Component
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   - File: src/app/components/Hero.tsx
+   - Deskripsi: Menampilkan bagian pengantar dengan tagline yang menarik dan tombol ajakan bertindak.
+     3.2 Solutions Component
+   - File: src/app/components/Solutions.tsx
+   - Deksripsi: Daftar solusi inovatif yang ditawarkan oleh AgriNext dengan elemen interaktif.
+     3.3 Blogs Component
+   - File: src/app/components/Blogs.tsx
+   - Deskripsi: Menampilkan daftar blog terkait inovasi pertanian.
+     3.4 Services Component
+   - File: src/app/components/Services.tsx
+   - Deskripsi: Menyoroti berbagai layanan yang disediakan oleh AgriNext.
+     3.5 Faq Component
+   - File: src/app/components/Faq.tsx
+   - Deskripsi: Berisi pertanyaan umum dengan jawaban yang dapat diperluas.
+     3.6 Footer Component
+   - File: src/app/components/Footer.tsx
+   - Deskripsi: Berisi informasi kontak dan tautan media sosial.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Routing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Main Page: /src/app/page.tsx - Entry point untuk aplikasi AgriNext.
+- Single Blog Page:src/app/blog/[label]/page.tsx - Menampilkan postingan blog individual secara dinamis berdasarkan label.
+- Chatbot Page: src/app/agribot/page.tsx - Halaman khusus untuk chatbot AgriBot.
 
-## Learn More
+5. Installation & Setup
 
-To learn more about Next.js, take a look at the following resources:
+- Clone Repository
+  git clone https://github.com/syahrulj6/agrinext.git
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Ubah direktori ke folder proyek
+  cd agrinext
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Install dependencies
+  npm install
 
-## Deploy on Vercel
+- Run Development
+  npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Google LightHouse
+![Screenshot](public/latestlighthousetest.png)

@@ -21,7 +21,7 @@ const Navbar = () => {
 
               <div className="flex items-center ml-auto gap-3 mx-4">
                 <div className="flex items-center lg:hidden">
-                  <Link href="/bot" className="text-md font-semibold text-primary flex gap-2 items-center">
+                  <Link href="/agribot" className="text-md font-semibold text-primary flex gap-2 items-center">
                     <p className="text-lg font-semibold text-primary">AgriBot</p>
                     <div className="bg-[#e5f7e1] p-2 rounded-full">
                       <Bot className="h-5 w-5 text-primary" />
@@ -50,13 +50,13 @@ const Navbar = () => {
 
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                 <div className="ml-4 flex lg:ml-6">
-                  <Link href="/bot" className="text-md font-semibold text-primary flex gap-2 items-center">
+                  <Link href="/agribot" className="text-md font-semibold text-primary flex gap-2 items-center">
                     <p className="text-lg font-semibold text-primary">AgriBot</p>
-                    <div className="bg-[#e5f7e1] p-2 rounded-full">
+                    <div className="bg-softPrimary p-2 rounded-full">
                       <Bot className="h-5 w-5 text-primary" />
                     </div>
                   </Link>
-                  <Link href="/kontak-kami" className="mx-3 flex gap-3 px-3 py-2 rounded-full justify-center w-fit items-center bg-primary hover:bg-[#327726] transition-all">
+                  <Link href="/kontak-kami" className="mx-3 flex gap-3 px-3 py-2 rounded-full justify-center w-fit items-center bg-primary hover:bg-second transition-all">
                     <p className="text-white text-md text-base">Kontak Kami</p>
                     <div className="bg-white p-2 rounded-full">
                       <ArrowRight className="w-4 h-4 text-primary" />

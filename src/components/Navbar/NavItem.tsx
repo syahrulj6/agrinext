@@ -11,14 +11,15 @@ type Category = (typeof BLOG_CATEGORIES)[number];
 interface NavItemProps {
   category: Category;
   handleOpen: () => void;
+  handleClose: () => void;
   isOpen: boolean;
   isAnyOpen: boolean;
 }
 
-const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
+const NavItem = ({ category, handleOpen, handleClose, isAnyOpen, isOpen }: NavItemProps) => {
   return (
     <div className="flex ">
-      <div className="lg:-ml-4 relative flex items-center text-gray-700 hover:text-black transition-all  duration-150">
+      <div className="lg:-ml-4 relative flex items-center text-gray-700 hover:text-black transition-all duration-150">
         <button className="gap-1.5 font-semibold flex px-4 items-center" onClick={handleOpen}>
           {category.label}
           <ChevronDownIcon
@@ -47,7 +48,13 @@ const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
                         <Image src={item.imageSrc} alt="Product category image" fill className="object-cover object-center" sizes="(max-width: 640px) 50vw, (min-width: 641px) 25vw" />
                       </div>
                       <p className="mt-6 block font-medium text-black">{item.name}</p>
-                      <Link href={`/blog/${item.href}`} className="mt-1">
+                      <Link
+                        href={`/blog/${item.href}`}
+                        className="mt-1"
+                        onClick={() => {
+                          handleClose();
+                        }}
+                      >
                         Read now
                       </Link>
                     </div>
