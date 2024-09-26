@@ -67,7 +67,7 @@ const Chatbot: React.FC = () => {
   };
 
   return (
-    <MaxWidthWrapper classname="my-12 py-12 border rounded-lg ">
+    <MaxWidthWrapper classname="mt-8  py-8 md:py-20 border rounded-lg md:mb-32 ">
       <div className="flex gap-2 items-center justify-center md:justify-start">
         <p className="text-2xl font-semibold text-primary">AgriBot</p>
         <div className="bg-softPrimary p-2 rounded-full">

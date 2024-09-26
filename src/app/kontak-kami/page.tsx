@@ -53,7 +53,7 @@ const UnderlineTemplate = ({ icon, text }: { icon: ReactNode; text: string }) =>
 
 const KontakKamiPage = () => {
   return (
-    <MaxWidthWrapper classname="mt-12">
+    <MaxWidthWrapper classname="mt-12 mb-0 md:mb-20">
       <div className="container flex flex-col">
         <div className="flex flex-col items-center ">
           <h2 className="text-5xl md:text-6xl mb-5 font-bold text-center text-gray-950">Hubungi Kami</h2>
@@ -97,7 +97,7 @@ const KontakKamiPage = () => {
       </div>
 
       <div className="flex items-center flex-col">
-        <h2 className="text-4xl text-center font-bold tracking-tight mb-16">Yang mungkin Anda tanyakan!</h2>
+        <h2 className="md:text-4xl text-3xl text-center font-bold tracking-tight md:mb-16 mb-8 mt-7 md:mt-0">Yang mungkin Anda tanyakan!</h2>
         <FaqsTemplate
           icon={<Smile />}
           title="Apa itu teknologi web pertanian?"
