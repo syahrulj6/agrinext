@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { ArrowUpRight, Facebook, Instagram, Linkedin, Twitter, LucideIcon } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface SocialIconProps {
   Icon: LucideIcon;
@@ -40,9 +41,9 @@ const Footer: FC = () => {
           </p>
           <p className="text-xs md:text-base  md:tracking-tighter font-normal mb-5">strategi hasil dan pertumbuhan nyata.</p>
           <div className="button flex justify-center">
-            <button className="bg-primary flex py-4 px-9 rounded-md text-white shadow-second shadow-2xl hover:bg-second transition-all">
+            <Link href="/kontak-kami" className="bg-primary flex py-4 px-9 rounded-md text-white shadow-second shadow-2xl hover:bg-second transition-all">
               Hubungi Kami <ArrowUpRight className="ml-2 w-5" />
-            </button>
+            </Link>
           </div>
         </div>
 
