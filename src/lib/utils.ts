@@ -39,7 +39,7 @@ export function constructMetadata({
       creator: '@codewithjay.io',
     },
     icons,
-    metadataBase: new URL('http://localhost:3000'),
+    metadataBase: new URL('https://agrinext.vercel.app/'),
     ...(noIndex && {
       robots: {
         index: false,

@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="flex flex-col w-full">
           <Tagline title="Memberdayakan Pertanian Modern" />
 
-          <h1 className="text-5xl lg:text-6xl font-bold text-primary mt-4">Solusi pertanian berkelanjutan untuk masa depan yang lebih baik.</h1>
+          <h1 className="text-5xl lg:text-6xl font-bold text-primary mt-4 w-80 md:w-fit ">Solusi pertanian berkelanjutan untuk masa depan yang lebih baik.</h1>
 
           <p className="text-primary mt-6 w-3/4 tracking-tight">Menghadirkan teknologi mutakhir dan praktik inovatif ke dunia pertanian, membantu Anda memaksimalkan hasil, mengurangi limbah, dan meningkatkan keberlanjutan</p>
 
