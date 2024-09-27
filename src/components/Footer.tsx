@@ -22,9 +22,9 @@ const FooterLinks: FC<FooterLinksProps> = ({ title, links }) => (
   <div className="footer-section flex flex-col gap-4 text-white md:mr-3">
     <h2 className="text-xl font-semibold mb-2">{title}</h2>
     {links.map((link, index) => (
-      <a key={index} className="font-normal">
+      <p key={index} className="font-normal">
         {link}
-      </a>
+      </p>
     ))}
   </div>
 );
