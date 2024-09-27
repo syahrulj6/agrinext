@@ -14,8 +14,8 @@ export const BLOG_CATEGORIES = [
         imageSrc: '/blog2.jpg',
       },
       {
-        name: 'Panduan Penggunaan Teknologi',
-        href: '/blogs',
+        name: 'Tren Pertanian',
+        href: '/tren-pertanian-berkelanjutan',
         imageSrc: '/blog3.jpg',
       },
     ],
