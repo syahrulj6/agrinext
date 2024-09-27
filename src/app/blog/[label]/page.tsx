@@ -43,7 +43,7 @@ const Page = ({ params }: PropsPage) => {
       <Tagline title="Postingan Terkait" />
       <div className="grid grid-cols-3 gap-4 mt-8 mb-8 md:mb-16">
         {relatedBlogs.map((relatedBlog) => (
-          <Link href={relatedBlog.label} key={relatedBlog.id} className="col-span-1 flex flex-col">
+          <Link href={`/blog/${relatedBlog.label}`} key={relatedBlog.id} className="col-span-1 flex flex-col">
             <div className="relative w-full h-[150px] md:h-[250px] overflow-hidden rounded-xl">
               <Image src={relatedBlog.image} alt="Blog Image" fill className="object-cover" sizes="(max-width: 640px) 100vw, (min-width: 641px) 100vw" />
             </div>

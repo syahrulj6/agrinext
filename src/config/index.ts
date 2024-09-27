@@ -5,17 +5,17 @@ export const BLOG_CATEGORIES = [
     featured: [
       {
         name: 'Inovasi Terbaru',
-        href: '/inovasi-teknologi-pertanian',
+        href: 'inovasi-teknologi-pertanian',
         imageSrc: '/blog1.jpg',
       },
       {
         name: 'Tips Bertani',
-        href: '/5-tips-dari-pakar',
+        href: '5-tips-dari-pakar',
         imageSrc: '/blog2.jpg',
       },
       {
         name: 'Tren Pertanian',
-        href: '/tren-pertanian-berkelanjutan',
+        href: 'tren-pertanian-berkelanjutan',
         imageSrc: '/blog3.jpg',
       },
     ],
