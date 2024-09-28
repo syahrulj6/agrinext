@@ -1,8 +1,8 @@
 1. Ringkasan Project
-
    - Nama Project: Agrinext
    - Deskripsi: Aplikasi web statis yang berfokus pada penyediaan solusi dan layanan pertanian inovatif.
    - Teknologi yang Digunakan: Next.js14, TypeScript, Tailwind CSS
+   - Link Live Website: https://agrinext.vercel.app/
 
 2. Struktur Folder
    /app
