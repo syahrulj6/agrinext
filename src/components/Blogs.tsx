@@ -86,7 +86,7 @@ const Blogs = () => {
             <h2 className="text-base font-bold text-primary mt-2">{blog.title}</h2>
             <p className="text-gray-400 text-sm mt-2 mb-5">{blog.date}</p>
 
-            <Link className="w-fit rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all px-4 py-2" href={`/blog/${blog.label}`}>
+            <Link className="w-fit rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all px-4 py-2" href={`/blogs/${blog.label}`}>
               Read More
             </Link>
           </div>
