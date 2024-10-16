@@ -51,19 +51,19 @@ const MobileNav = () => {
             <div className="mt-5 w-full px-4 flex flex-col gap-6">
               <div className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
                 <Layers className="black h-4 w-4" />
-                <Link href="#layanan" className="font-semibold lg:text-md" onClick={() => setIsOpen(false)}>
+                <Link href="https://agrinext.vercel.app/#layanan" className="font-semibold lg:text-md" onClick={() => setIsOpen(false)}>
                   Layanan
                 </Link>
               </div>
               <div className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
                 <Blend className="h-4 w-4" />
-                <Link href="#solusi" className="font-semibold lg:text-md" onClick={() => setIsOpen(false)}>
+                <Link href="https://agrinext.vercel.app/#solusi" className="font-semibold lg:text-md" onClick={() => setIsOpen(false)}>
                   Solusi
                 </Link>
               </div>
               <div className="flex gap-2 items-center text-gray-700 hover:underline hover:text-black transition-all hover:cursor-pointer duration-150">
                 <UsersRound className="h-4 w-4" />
-                <Link href="#tentang-kami" className="font-semibold lg:text-md" onClick={() => setIsOpen(false)}>
+                <Link href="https://agrinext.vercel.app/#tentang-kami" className="font-semibold lg:text-md" onClick={() => setIsOpen(false)}>
                   Tentang Kami
                 </Link>
               </div>
