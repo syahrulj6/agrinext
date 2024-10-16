@@ -2,7 +2,7 @@
 
 import React, { useState, ReactNode } from 'react';
 import MaxWidthWrapper from '@/components/MaxWidthWrapper';
-import { MessageCircle, Send, Twitter, PhoneOutgoing, MapPin, Smile, ChevronUp, ChevronDown, StretchHorizontal, Bot, Rocket } from 'lucide-react';
+import { LinkedinIcon, Send, Twitter, PhoneOutgoing, MapPin, Smile, ChevronUp, ChevronDown, StretchHorizontal, Bot, Rocket } from 'lucide-react';
 
 const FormInput = ({ label, type, placeholder, isTextArea = false }: { label: string; type: string; placeholder: string; isTextArea?: boolean; width: string }) => {
   return (
@@ -79,8 +79,8 @@ const KontakKamiPage = () => {
           <div className="side2 w-full lg:w-[25rem] py-6">
             <div className="top mb-8">
               <h2 className="font-semibold text-xl mb-2">Chat with Us</h2>
-              <p className="text-gray-700 mb-6">Hubungi tim kami melalui live chat.</p>
-              <UnderlineTemplate icon={<MessageCircle />} text="Start a live chat" />
+              <p className="text-gray-700 mb-6">Hubungi tim kami </p>
+              <UnderlineTemplate icon={<LinkedinIcon />} text="Find us on Linkedin" />
               <UnderlineTemplate icon={<Send />} text="Shoot us an email" />
               <UnderlineTemplate icon={<Twitter />} text="Message us on Twitter" />
             </div>

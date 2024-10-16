@@ -18,7 +18,7 @@ interface NavItemProps {
 
 const NavItem = ({ category, handleOpen, handleClose, isAnyOpen, isOpen }: NavItemProps) => {
   return (
-    <div className="flex ">
+    <div className="flex">
       <div className="lg:-ml-4 relative flex items-center text-gray-700 hover:text-black transition-all duration-150">
         <button className="gap-1.5 font-semibold flex px-4 items-center" onClick={handleOpen}>
           {category.label}
@@ -49,7 +49,7 @@ const NavItem = ({ category, handleOpen, handleClose, isAnyOpen, isOpen }: NavIt
                       </div>
                       <p className="mt-6 block font-medium text-black">{item.name}</p>
                       <Link
-                        href={`/blog/${item.href}`}
+                        href={`/blogs/${item.href}`}
                         className="mt-1"
                         onClick={() => {
                           handleClose();

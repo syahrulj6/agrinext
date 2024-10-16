@@ -4,6 +4,7 @@ import NavItems from './NavItems';
 import MobileNav from './MobileNav';
 import Image from 'next/image';
 import { ArrowRight, Blend, Bot, Layers, UsersRound } from 'lucide-react';
+import Weather from '../Weather';
 
 const Navbar = () => {
   return (
@@ -28,6 +29,10 @@ const Navbar = () => {
                     </div>
                   </Link>
                 </div>
+                <div className="lg:hidden">
+                  <Weather />
+                </div>
+
                 <MobileNav />
               </div>
 
@@ -49,13 +54,16 @@ const Navbar = () => {
               </div>
 
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                <div className="ml-4 flex lg:ml-6">
+                <div className="ml-4 flex lg:ml-6 items-center">
                   <Link href="/agribot" className="text-md font-semibold text-primary flex gap-2 items-center">
                     <p className="text-lg font-semibold text-primary">AgriBot</p>
                     <div className="bg-softPrimary p-2 rounded-full">
                       <Bot className="h-5 w-5 text-primary" />
                     </div>
                   </Link>
+                  <div className="ml-2">
+                    <Weather />
+                  </div>
                   <Link href="/kontak-kami" className="mx-3 flex gap-3 px-3 py-2 rounded-full justify-center w-fit items-center bg-primary hover:bg-second transition-all">
                     <p className="text-white text-md text-base">Kontak Kami</p>
                     <div className="bg-white p-2 rounded-full">
