@@ -22,8 +22,8 @@ const Weather = () => {
           if (data) {
             provideAdvice(data.main.temp);
           }
-        } catch (error: any) {
-          console.error('Failed to fetch weather data', error);
+        } catch (error) {
+          console.error('Failed to fetch weather data', error instanceof Error ? error.message : error);
         }
       }
     };
@@ -72,7 +72,7 @@ const Weather = () => {
 
   return (
     <div className="relative">
-      {weather && (
+      {weather ? (
         <div className="flex items-center gap-1">
           <div className="tooltip-button rounded-full bg-gray-200 p-2 cursor-pointer" onClick={handleToggleTooltip}>
             <ThermometerSun className="h-5 w-5 text-primary" />
@@ -84,6 +84,8 @@ const Weather = () => {
             </div>
           )}
         </div>
+      ) : (
+        <p>Loading weather data...</p>
       )}
     </div>
   );
