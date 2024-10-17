@@ -50,6 +50,7 @@
 - Blog Page:src/app/blogs/page.tsx - Menampilkan semua postingan blog.
 - Single Blog Page:src/app/blogs/[label]/page.tsx - Menampilkan postingan blog individual secara dinamis berdasarkan label.
 - Chatbot Page: src/app/agribot/page.tsx - Halaman khusus untuk chatbot AgriBot.
+- Kontak Kami Page: src/app/kontak-kami/page.tsx - Halaman kontak kami
 
 5. Installation & Setup
 
