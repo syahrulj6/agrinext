@@ -78,7 +78,7 @@ const Weather = () => {
             <ThermometerSun className="h-5 w-5 text-primary" />
           </div>
           {isTooltipVisible && (
-            <div className="tooltip top-12 right-0 md:top-10 md:w-44 absolute z-10 p-2 text-primary bg-gray-200 rounded-md shadow-md">
+            <div className="tooltip top-12 w-32 right-0 md:top-10 md:w-44 absolute z-10 p-2 text-primary bg-gray-200 rounded-md shadow-md">
               <p>Suhu: {(weather.main.temp - 273.15).toFixed(2)}°C</p>
               <p>Saran: {advice}</p>
             </div>

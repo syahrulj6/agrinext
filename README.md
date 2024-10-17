@@ -1,4 +1,5 @@
 1. Ringkasan Project
+
    - Nama Project: Agrinext
    - Deskripsi: Aplikasi web statis yang berfokus pada penyediaan solusi dan layanan pertanian inovatif.
    - Teknologi yang Digunakan: Next.js14, TypeScript, Tailwind CSS
@@ -23,7 +24,7 @@
    └── /kontak-kami
    └── page.tsx # Halaman Kontak Kami
 
-4. Deskripsi Component
+3. Deskripsi Component
    3.1 Hero Component
 
    - File: src/app/components/Hero.tsx
@@ -44,7 +45,7 @@
    - File: src/app/components/Footer.tsx
    - Deskripsi: Berisi informasi kontak dan tautan media sosial.
 
-5. Routing
+4. Routing
 
 - Main Page: /src/app/page.tsx - Entry point untuk aplikasi AgriNext.
 - Blog Page:src/app/blogs/page.tsx - Menampilkan semua postingan blog.
@@ -68,4 +69,4 @@
 
 Google LightHouse
 ![Screenshot](/public/desktop-lighthouse.png)
-![Screenshot](public/mobile-lighthouse.png)
+![Screenshot](public/lighthouse.png)
