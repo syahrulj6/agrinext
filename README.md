@@ -14,13 +14,16 @@
    │ ├── Services.tsx # Services section component
    │ ├── Faq.tsx # FAQ section component
    │ └── Footer.tsx # Footer component
-   ├── /blog
+   ├── /blogs
    │ └── [label]
-   │ └── page.tsx # Halaman untuk menampilkan satu postingan blog
+   │ └──── page.tsx# Halaman untuk menampilkan satu postingan blog
+   │ └── page.tsx # Halaman untuk menampilkan semua postingan blog
    └── /agribot
    └── page.tsx # Halaman chatbot
+   └── /kontak-kami
+   └── page.tsx # Halaman Kontak Kami
 
-3. Deskripsi Component
+4. Deskripsi Component
    3.1 Hero Component
 
    - File: src/app/components/Hero.tsx
@@ -41,10 +44,11 @@
    - File: src/app/components/Footer.tsx
    - Deskripsi: Berisi informasi kontak dan tautan media sosial.
 
-4. Routing
+5. Routing
 
 - Main Page: /src/app/page.tsx - Entry point untuk aplikasi AgriNext.
-- Single Blog Page:src/app/blog/[label]/page.tsx - Menampilkan postingan blog individual secara dinamis berdasarkan label.
+- Blog Page:src/app/blogs/page.tsx - Menampilkan semua postingan blog.
+- Single Blog Page:src/app/blogs/[label]/page.tsx - Menampilkan postingan blog individual secara dinamis berdasarkan label.
 - Chatbot Page: src/app/agribot/page.tsx - Halaman khusus untuk chatbot AgriBot.
 
 5. Installation & Setup
